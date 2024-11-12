@@ -17,6 +17,15 @@ return {
                 arrow_closed = "▶",
                 arrow_open = "▼",
               },
+              git = {
+                unstaged = "✗",
+                staged = "✓",
+                unmerged = "",
+                renamed = "➜",
+                untracked = "★",
+                deleted = "",
+                ignored = "◌",
+              },
             },
           },
         },
@@ -30,9 +39,15 @@ return {
           },
         },
         filters = {
-          dotfiles = true,
+          dotfiles = false,
+          custom = { ".git" },
         },
-      })
+        git = {
+          ignore = false,
+        },
+        highlight_git = true,
+        highlight_opened_files = "icon",
+			})
     end,
   },
 }
