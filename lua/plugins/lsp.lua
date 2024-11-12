@@ -10,7 +10,8 @@ return {
 
       lspconfig.lua_ls.setup({
         on_attach = common_on_attach,
-        settings = {
+	cmd = { "lua-language-server" },
+	settings = {
           Lua = {
             diagnostics = { globals = { "vim" } },
             workspace = { library = vim.api.nvim_get_runtime_file("", true) },
