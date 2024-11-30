@@ -5,10 +5,10 @@ return {
 		config = function()
 			require("lualine").setup({
 				options = {
-					theme = "solarized",
-					component_separators = { left = '|', right = '|' }, -- Simple vertical bars instead of arrows
-					section_separators = { left = '', right = '' }, -- Remove the section separators entirely
-					icons_enabled = false, -- Disables all icons, including any OS logos or other icons
+					theme = "tokyonight",
+					component_separators = { left = '|', right = '|' },
+					section_separators = { left = '', right = '' },
+					icons_enabled = false,
 				},
 				sections = {
 					lualine_a = { 'mode' },

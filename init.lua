@@ -14,7 +14,6 @@ vim.api.nvim_set_keymap("n", "<leader>tn", ":tabnext<CR>", { noremap = true, sil
 vim.api.nvim_set_keymap("n", "<leader>bd", ":bd<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>bc", ":bp|bd #<CR>", { noremap = true, silent = true })
 
-
 vim.api.nvim_set_keymap("n", "q", ":qa<CR>", { noremap = true, silent = true })
 
 vim.api.nvim_set_keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>", { noremap = true, silent = true })
@@ -23,6 +22,8 @@ vim.api.nvim_set_keymap("n", "<leader>fb", "<cmd>Telescope buffers<CR>", { norem
 vim.api.nvim_set_keymap("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", { noremap = true, silent = true })
 
 vim.env.CURL_CA_BUNDLE = "/etc/ssl/cert.pem"
+
+vim.api.nvim_create_user_command('MusicToggle', ':!osascript -e "tell application \\"System Events\\" to key code 16"', {})
 
 require("config.scroll_config")
 require("config.lazy")
